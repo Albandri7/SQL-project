@@ -1,4 +1,4 @@
-Q1:
+#Q1:
 SELECT c.NAME,
        Count(f.rating) R_rate
 FROM   film_category fa
@@ -10,7 +10,7 @@ WHERE  rating = 'R'
 GROUP  BY c.NAME
 ORDER  BY r_rate DESC 
 
-Q2:
+#Q2:
 SELECT c.first_name || ' ' || c.last_name AS full_name, Sum(p.amount)  AS amount,p.payment_date
 FROM   customer c
        JOIN payment p
@@ -25,7 +25,7 @@ ORDER  BY Sum(p.amount) DESC,
           c.first_name || ' ' || c.last_name 
 LIMIT 20
 
-Q3:
+#Q3:
 SELECT c.NAME,
        Count(f.length) AS number_of_films
 FROM   film_category fc
@@ -37,7 +37,7 @@ WHERE  length > 100
 GROUP  BY NAME
 ORDER  BY number_of_films  
 
-Q4:
+#Q4:
 SELECT t1.NAME,
        t1.standard_quartile,
        Count(t1.standard_quartile)
